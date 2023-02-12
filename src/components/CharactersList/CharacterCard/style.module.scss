@@ -1,0 +1,23 @@
+.char_card {
+    display: flex;
+    flex-direction: column;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.25));
+    transition: transform .3s ease, filter .3s ease;
+
+    &:hover {
+        transform: translateY(-7px);
+        filter: drop-shadow(0px 5px 20px #9F0013);
+        transition: transform .3s ease, filter .3s ease;
+    }
+}
+
+.char_name {
+    padding: 15px 15px 74px 15px;
+    background-color: #232222;
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #FFFFFF;
+}

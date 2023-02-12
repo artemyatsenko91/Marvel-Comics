@@ -1,0 +1,12 @@
+.comics_grid {
+    display: grid;
+    grid: 1fr / 1fr 1fr 1fr 1fr;
+    gap: 47px;
+    margin-top: 45px;
+}
+
+.button {
+    margin: 45px 0 45px;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,11 @@
+.char_grid {
+    display: grid;
+    grid: 1fr / 1fr 1fr 1fr;
+    gap: 25px;
+}
+
+.button {
+    margin: 45px 0 45px;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,36 @@
+$screen-400-max: 400px;
+$screen-576-max: 576px;
+$screen-768-max: 768px;
+$screen-992-max: 992px;
+$screen-1200-max: 1200px;
+
+// media lt queries
+@mixin lt-400 {
+    @media screen and (max-width: #{$screen-400-max}) {
+        @content;
+    }
+}
+
+@mixin lt-576 {
+    @media screen and (max-width: #{$screen-576-max}) {
+        @content;
+    }
+}
+
+@mixin lt-768 {
+    @media screen and (max-width: #{$screen-768-max}) {
+        @content;
+    }
+}
+
+@mixin lt-992 {
+    @media screen and (max-width: #{$screen-992-max}) {
+        @content;
+    }
+}
+
+@mixin lt-1200 {
+    @media screen and (max-width: #{$screen-1200-max}) {
+        @content;
+    }
+}

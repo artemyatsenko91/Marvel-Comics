@@ -1,0 +1,87 @@
+@import '../../style/variables.scss';
+
+.character_info_block {
+    margin-top: 54px;
+
+    .wrapper {
+        display: flex;
+        -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+
+        .character_info {
+            display: flex;
+            padding: 35px 35px 35px 40px;
+            flex: 0 1 50%;
+
+            .character_img {
+                height: 180px;
+                width: 180px;
+                object-fit: cover;
+            }
+
+            .character_descr {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-left: 30px;
+
+                .character_name {
+                    font-family: 'Roboto Condensed', sans-serif;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 22px;
+                    line-height: 1.18em;
+                    color: $color-black;
+                    text-transform: uppercase;
+                    text-align: left;
+                }
+
+                .character_bio {
+                    margin-top: 10px;
+                    font-family: 'Roboto Condensed', sans-serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 1.14em;
+                    color: $color-black;
+                    text-align: left;
+                }
+            }
+        }
+
+        .random_character {
+            position: relative;
+            background: #232222;
+            flex: 0 1 50%;
+            padding: 35px 0 35px 40px;
+
+            .random_block_text {
+                display: flex;
+                flex-direction: column;
+                font-family: 'Roboto Condensed';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 1.3em;
+                color: $color-white;
+            }
+
+            .random_btn_title {
+                margin-top: 33px;
+            }
+
+            .random_bg_img {
+                position: absolute;
+                bottom: 0;
+                right: -35.5px;
+            }
+        }
+    }
+}
+
+.btn_row {
+    display: flex;
+    margin-top: 13px;
+    gap: 30px;
+}

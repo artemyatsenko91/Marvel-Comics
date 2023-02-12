@@ -1,0 +1,29 @@
+.comics_card {
+    &:hover {
+        
+        transform: translateY(-5px);
+    }
+}
+
+.comics_img {
+    transform: translateX(-5px);
+}
+
+.comics_name {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+}
+
+.comics_price {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 5px;
+    color: rgba(0, 0, 0, 0.6);
+}
