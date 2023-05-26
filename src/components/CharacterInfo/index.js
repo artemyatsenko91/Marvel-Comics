@@ -1,46 +1,54 @@
 import style from './style.module.scss';
 import { ButtonRed, ButtonGrey } from '../Buttons';
-import loki from '../../images/loki.jpg';
 
-const CharacterInfo = () => {
+const CharacterInfo = ({ char }) => {
+    const charBio = () => {
+        if (char.description) {
+            return char.description;
+        } else return 'No description for this character';
+    };
+
+    const comicsList = () => {
+        if (char[0].comics.items.length > 1) {
+            return char[0].comics.items.map((item, index) => {
+                if (index > 14) return null;
+                return (
+                    <li className={style.list_item} key={index}>
+                        {item.name}
+                    </li>
+                );
+            });
+        } else return 'Character has no comics';
+    };
+
     return (
-        <aside className={style.character_info}>
+        <>
             <div className={style.about_char}>
-                <img src={loki} alt='loki' />
+                <div className={style.img_wrapper}>
+                    <img
+                        className={style.img}
+                        src={`${char[0].thumbnail.path}.${char[0].thumbnail.extension}`}
+                        alt={char[0].name}
+                    />
+                </div>
                 <div className={style.char_name_and_buttons}>
-                    <h3 className={style.char_name}>LOKI</h3>
+                    <h3 className={style.char_name}>{char[0].name}</h3>
                     <div className={style.char_buttons}>
-                        <ButtonRed btn_text='homepage' />
-                        <ButtonGrey btn_text='wiki' />
+                        <ButtonRed
+                            btn_text='homepage'
+                            btnUrl={char[0].urls[0].url}
+                        />
+                        <ButtonGrey
+                            btn_text='wiki'
+                            btnUrl={char[0].urls[1].url}
+                        />
                     </div>
                 </div>
             </div>
-            <p className={style.char_bio}>
-                In Norse mythology, Loki is a god or jötunn (or both). Loki is
-                the son of Fárbauti and Laufey, and the brother of Helblindi and
-                Býleistr. By the jötunn Angrboða, Loki is the father of Hel, the
-                wolf Fenrir, and the world serpent Jörmungandr. By Sigyn, Loki
-                is the father of Nari and/or Narfi and with the stallion
-                Svaðilfari as the father, Loki gave birth—in the form of a
-                mare—to the eight-legged horse Sleipnir. In addition, Loki is
-                referred to as the father of Váli in the Prose Edda.
-            </p>
+            <p className={style.char_bio}>{charBio()}</p>
             <h4 className={style.comics_title}>Comics:</h4>
-            <ul className={style.comics_list}>
-                <li className={style.list_item}>
-                    All-Winners Squad: Band of Heroes (2011) #3
-                </li>
-                <li className={style.list_item}>
-                    All-Winners Squad: Band of Heroes (2011) #3
-                </li>
-                <li className={style.list_item}>
-                    All-Winners Squad: Band of Heroes (2011) #3
-                </li>
-                <li className={style.list_item}>
-                    All-Winners Squad: Band of Heroes (2011) #3
-                </li>
-            </ul>
-        </aside>
+            <ul className={style.comics_list}>{comicsList()}</ul>
+        </>
     );
 };
 
