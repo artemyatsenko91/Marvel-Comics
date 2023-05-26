@@ -1,5 +1,5 @@
 import Spinner from '../components/spinner/Spinner';
-import ErrorMessage from '../components/errorMessage/ErrorMessage';
+import ErrorMessage from '../components/ErrorMessage';
 import Skeleton from '../components/skeleton/Skeleton';
 
 const setContent = (process, Component, data) => {

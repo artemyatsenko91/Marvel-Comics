@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import {CSSTransition, TransitionGroup} from 'react-transition-group';
 
 import useMarvelService from '../../services/MarvelService';
-import Spinner from '../spinner/Spinner';
-import ErrorMessage from '../errorMessage/ErrorMessage';
+import Spinner from '../Spinner';
+import ErrorMessage from '../ErrorMessage';
 
 import './charList.scss';
 
